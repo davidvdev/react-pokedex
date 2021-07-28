@@ -45,6 +45,11 @@ function App() {
     setMyTeam([...myTeam, pokemon])
   }
 
+  const removeFromMyTeam = (id) => {
+    const newTeam = [...myTeam].splice(id, 1)
+    setMyTeam(newTeam)
+  }
+
   return (
     <div className="App">
       <Header />
@@ -53,7 +58,7 @@ function App() {
           <Main {...pokemonList} onePokemon={onePokemon} handleClick={grabOnePokemon} buttonClick={addToMyTeam}/> 
         </Route>
         <Route path="/MyTeam">
-          <MyTeam myTeam={myTeam}/>
+          <MyTeam myTeam={myTeam} handleClick={removeFromMyTeam}/>
         </Route>
       </Switch>
 

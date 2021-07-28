@@ -48,6 +48,15 @@ main li {
   text-align: left;
 }
 
+.my-team {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.my-team .team-card {
+  margin: 1em;
+}
+
 footer {
   height: 10vh;
 }
