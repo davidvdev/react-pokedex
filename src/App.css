@@ -36,6 +36,16 @@ main li {
 
 .one-pokemon {
   align-self: center;
+  margin-right: 15%;
+}
+
+.pokemon-card {
+  background-color: whitesmoke;
+  padding: 1em;
+}
+
+.card-details {
+  text-align: left;
 }
 
 footer {

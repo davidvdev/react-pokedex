@@ -11,13 +11,24 @@ import MyTeam from './pages/MyTeam';
 function App() {
 
   const [pokemonList, setPokemonList] = useState(null)
+  const [onePokemon, setOnePokemon] = useState(null)
+  const [myTeam, setMyTeam] = useState([])
 
   const callAPIforList = async () => {
-    const url = (`https://pokeapi.co/api/v2/pokemon?offset=0&limit=151`)
+    const url = `https://pokeapi.co/api/v2/pokemon?offset=0&limit=151`
     const response = await fetch(url)
     const data = await response.json()
-    console.log(data)
+    console.log('API for List',data)
     setPokemonList(data)
+  }
+
+  const callAPIforPokemon = async (pokemon) => {
+    const name = pokemon.toLowerCase()
+    const url = `https://pokeapi.co/api/v2/pokemon/${name}`
+    const response = await fetch(url)
+    const data = await response.json()
+    console.log('API for pokemon',data)
+    setOnePokemon(data)
   }
 
   useEffect(()=>{
@@ -25,8 +36,13 @@ function App() {
       console.log(pokemonList)
   },[])
 
-  const handleClick = (event) => {
+  const grabOnePokemon = (event) => {
+    callAPIforPokemon(event.target.innerText)
     console.log(event)
+  }
+
+  const addToMyTeam = (pokemon) => {
+    setMyTeam([...myTeam, pokemon])
   }
 
   return (
@@ -34,10 +50,10 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/">
-          <Main {...pokemonList} handleClick={handleClick}/> 
+          <Main {...pokemonList} onePokemon={onePokemon} handleClick={grabOnePokemon} buttonClick={addToMyTeam}/> 
         </Route>
         <Route path="/MyTeam">
-          <MyTeam />
+          <MyTeam myTeam={myTeam}/>
         </Route>
       </Switch>
 

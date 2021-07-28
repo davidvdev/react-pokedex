@@ -8,7 +8,7 @@ const Main = (props) => {
     const loaded = () => {
 
         const handleClick = (event) => {
-            console.log(event.target)
+            console.log(event)
             props.handleClick(event)
         }
 
@@ -29,7 +29,7 @@ const Main = (props) => {
                         })}
                     </ul>
                     <div className="one-pokemon">
-                        <OnePokemon />
+                        <OnePokemon {...props.onePokemon} handleClick={props.buttonClick}/>
                     </div>
                 </main>
             )
