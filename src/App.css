@@ -6,4 +6,38 @@ header {
   display: flex;
   justify-content: center;
   align-items: baseline;
+  background-color: whitesmoke;
+}
+
+header h1 {
+  padding: 0 1.5em;
+  height: 10vh;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+main ul {
+  list-style-type: none;
+  width: 50%;
+  overflow: scroll;
+  height: 80vh;
+}
+
+main li {
+  padding: 0.25em 0.25em 0.25em 10%;
+  margin: 0.5em;
+  background-color: whitesmoke;
+  display: block;
+  text-align: left;
+}
+
+.one-pokemon {
+  align-self: center;
+}
+
+footer {
+  height: 10vh;
 }
