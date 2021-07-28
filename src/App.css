@@ -1,17 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Gayathri|Source+Sans+Pro&display=swap');
+
+
 .App {
   text-align: center;
+  background: url('https://res.cloudinary.com/radiscipio/image/upload/v1566938615/ldk7yfspcamsinxsvd1r.jpg') no-repeat;
+  background-size: cover;
+  
+}
+
+.logo {
+  height: 6rem;
+}
+
+.pikachu {
+  position: absolute;
+  left: 0;
+  height: 100px;
 }
 
 header {
+  font-family: 'Gayathri', sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: baseline;
-  background-color: whitesmoke;
+  background-color: white;
+  padding: 1em;
+  border-bottom: 8px black solid;
 }
 
-header h1 {
-  padding: 0 1.5em;
-  height: 10vh;
+header a {
+  text-decoration: none;
 }
 
 main {
@@ -23,15 +43,30 @@ main ul {
   list-style-type: none;
   width: 50%;
   overflow: scroll;
-  height: 80vh;
+  height: 70vh;
 }
 
 main li {
-  padding: 0.25em 0.25em 0.25em 10%;
+  padding: 0.25em 5% 0.25em 10%;
   margin: 0.5em;
-  background-color: whitesmoke;
-  display: block;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  border: 4px solid black;
+  border-radius: 20px 70px 70px 20px;
+}
+
+main li:hover {
+  background-color: rgb(236, 236, 236);
+  border: 4px solid #FBDB32;
+}
+
+.pokeball {
+  height: 1.5em;
 }
 
 .one-pokemon {
@@ -40,17 +75,25 @@ main li {
 }
 
 .pokemon-card {
-  background-color: whitesmoke;
-  padding: 1em;
+  /* background-color: rgb(203, 203, 203); */
+  /* padding: 1em; */
+  border: 10px solid #FBDB32;
+  border-radius: 10px;
+}
+
+.pokemon-card img{
+  padding: 0.5em;
 }
 
 .card-details {
   text-align: left;
+  padding-left: 0.5em;
 }
 
 .my-team {
   display: flex;
   flex-wrap: wrap;
+  min-height: 70vh;
 }
 
 .my-team .team-card {
@@ -59,4 +102,6 @@ main li {
 
 footer {
   height: 10vh;
+  border-top: 8px black solid;
+  background-color: white;
 }

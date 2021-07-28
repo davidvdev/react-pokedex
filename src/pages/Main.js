@@ -23,7 +23,7 @@ const Main = (props) => {
                                     name={pokemon.name}
                                     onClick={handleClick}
                                     >
-                                    {formatted}
+                                    {formatted} <img class="pokeball" src="https://rawcdn.githack.com/jkeohan/pokedex/5f567555602a7702380260e0fa5f300a3e083b26/src/closed-pokeball-color.png"></img>
                                 </li>
                                 )
                         })}
