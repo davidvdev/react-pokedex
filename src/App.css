@@ -79,6 +79,7 @@ main li:hover {
   /* padding: 1em; */
   border: 10px solid #FBDB32;
   border-radius: 10px;
+  box-shadow: 3px 2px 8px rgb(39, 39, 39);
 }
 
 .pokemon-card img{
@@ -92,6 +93,7 @@ main li:hover {
 
 .my-team {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   min-height: 70vh;
 }
