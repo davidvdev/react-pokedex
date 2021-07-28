@@ -2,12 +2,6 @@ import React from 'react'
 
 const MyTeam = (props) => {
 
-    const handleClick = (index, props) => {
-        console.log(index)
-        console.log(props)
-        props.handleClick(index, props)
-    }
-
     return (<div className="my-team">
         {props.myTeam.map((pokemon, index) => {
             const formatted = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)

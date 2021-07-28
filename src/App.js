@@ -18,7 +18,6 @@ function App() {
     const url = `https://pokeapi.co/api/v2/pokemon?offset=0&limit=151`
     const response = await fetch(url)
     const data = await response.json()
-    console.log('API for List',data)
     setPokemonList(data)
   }
 
@@ -27,18 +26,15 @@ function App() {
     const url = `https://pokeapi.co/api/v2/pokemon/${name}`
     const response = await fetch(url)
     const data = await response.json()
-    console.log('API for pokemon',data)
     setOnePokemon(data)
   }
 
   useEffect(()=>{
       callAPIforList()
-      console.log(pokemonList)
   },[])
 
   const grabOnePokemon = (event) => {
     callAPIforPokemon(event.target.innerText)
-    console.log(event)
   }
 
   const addToMyTeam = (pokemon) => {
@@ -46,7 +42,9 @@ function App() {
   }
 
   const removeFromMyTeam = (id) => {
-    const newTeam = [...myTeam].splice(id, 1)
+
+    const newTeam = [...myTeam]
+    newTeam.splice(id,1)
     setMyTeam(newTeam)
   }
 
