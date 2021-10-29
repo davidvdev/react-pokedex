@@ -107,3 +107,35 @@ footer {
   border-top: 8px black solid;
   background-color: white;
 }
+
+@media screen and (max-width: 670px){
+  .pikachu {
+    visibility: collapse;
+  }
+  header{
+    height: 100px;
+  }
+  header a {
+    margin-top: 90px;
+    padding: 8px;
+    display: block;
+  }
+  .logo {
+    position: absolute;
+    top: 3px;
+  }
+  main, .my-team {
+    flex-direction: column;
+  }
+  .pokemon-list {
+    margin: 0 0;
+    padding: 0;
+    width: 100%;
+    height: 20vh;
+    border-bottom: 3px solid black;
+  }
+  .one-pokemon, .team-card {
+    margin: 0 auto;
+    transform: scale(0.8);
+  }
+}
